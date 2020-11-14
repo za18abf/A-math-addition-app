@@ -6,4 +6,40 @@
     android:layout_height="match_parent"
     tools:context=".page3">
 
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="906dp"
+        android:layout_height="858dp"
+        android:background="@drawable/page2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.848"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="179dp"
+        android:layout_height="286dp"
+        android:layout_marginTop="432dp"
+        android:background="@drawable/cheers"
+        android:rotation="-24"
+        app:layout_constraintEnd_toEndOf="@id/imageView3"
+        app:layout_constraintHorizontal_bias="0.78"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/imageView3" />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="201dp"
+        android:layout_height="220dp"
+        android:layout_marginTop="128dp"
+        android:background="@drawable/spongebob"
+        android:rotation="-13"
+        android:rotationY="185"
+        app:layout_constraintEnd_toEndOf="@id/imageView4"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/imageView4" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
