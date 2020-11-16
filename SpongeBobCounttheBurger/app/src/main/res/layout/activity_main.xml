@@ -19,10 +19,10 @@
 
     <Button
         android:id="@+id/playbutton"
-        android:layout_width="96dp"
-        android:layout_height="78dp"
+        android:layout_width="88dp"
+        android:layout_height="79dp"
         android:layout_marginStart="203dp"
-        android:layout_marginTop="528dp"
+        android:layout_marginTop="600dp"
         android:layout_marginEnd="69dp"
 
         android:backgroundTint="#FFEB3B"
@@ -30,8 +30,10 @@
         android:textColor="#3E5457"
         app:iconTint="#FFFFFF"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@id/imageView" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 

@@ -8,10 +8,9 @@
 
     <ImageView
         android:id="@+id/imageView2"
-        android:layout_width="906dp"
-        android:layout_height="858dp"
-        android:background="@drawable/page2"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/background"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.357"
         app:layout_constraintStart_toStartOf="parent"
