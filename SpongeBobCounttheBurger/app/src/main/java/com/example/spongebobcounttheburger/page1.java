@@ -3,16 +3,22 @@ package com.example.spongebobcounttheburger;
 import androidx.appcompat.app.AppCompatActivity;
 
 
-
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
 import android.view.animation.AlphaAnimation;
 import android.widget.Button;
 import android.content.Intent;
+import android.widget.CompoundButton;
 import android.widget.ImageButton;
+import android.widget.Switch;
+import android.widget.Toast;
 
 public class page1 extends AppCompatActivity {
     private ImageButton button;
+    Switch aSwitch;
+    MediaPlayer mediaPlayer;
+
 
 
 
@@ -20,28 +26,48 @@ public class page1 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        button = (ImageButton) findViewById(R.id.playButton);
-
-        button.setOnClickListener(new View.OnClickListener() {
+        aSwitch = (Switch) findViewById(R.id.switch1);
+        mediaPlayer=MediaPlayer.create(page1.this,R.raw.lightofhope);
+        mediaPlayer.start();
+        mediaPlayer.setLooping(true);
+        aSwitch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
-            public void onClick(View v) {
-                openpage2(v);
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if (isChecked == true) {
+                    mediaPlayer.pause();
+                    Toast.makeText(getBaseContext(), "mute", Toast.LENGTH_SHORT).show();
+                } else {
 
+                    mediaPlayer.start();
+                    Toast.makeText(getBaseContext(), "unmute", Toast.LENGTH_SHORT).show();
+                }
             }
         });
 
-    }
 
-        public void openpage2 (View v) {
-        Intent intent = new Intent(page1.this, page2.class);
-        startActivity(intent);
-        v.startAnimation(clickplay);
+
+
+            button = (ImageButton) findViewById(R.id.playButton);
+
+            button.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    openpage2(v);
+
+                }
+            });
+
+        }
+
+        public void openpage2 (View v){
+            Intent intent = new Intent(page1.this, page2.class);
+            startActivity(intent);
+            v.startAnimation(clickplay);
+            mediaPlayer.stop();
 
         }
         private AlphaAnimation clickplay = new AlphaAnimation(1F, 0.5F);
 
 
+    }
 
-
-}

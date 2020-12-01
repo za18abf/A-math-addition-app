@@ -9,7 +9,7 @@
     tools:context=".page1">
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/bground1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@drawable/mainpage"
@@ -23,8 +23,8 @@
         android:layout_width="wrap_content"
         android:layout_height="198dp"
         android:layout_marginStart="100dp"
-        android:layout_marginTop="544dp"
-        android:background="@drawable/playbutton"
+        android:layout_marginTop="540dp"
+        android:background="@null"
         android:backgroundTint="#2CFFFFFF"
         android:scaleType="centerInside"
         app:layout_constraintEnd_toEndOf="parent"
@@ -33,7 +33,26 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/playbutton" />
 
+    <Switch
+        android:id="@+id/switch1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="692dp"
+        android:fontFamily="@font/aclonica"
+        android:text="Mute Sound"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="#FFEB3B"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:trackTint="#F1DC20"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />/>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
+
 
 

@@ -29,28 +29,66 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/clipboard" />
 
-    <Button
-        android:id="@+id/pagebutton"
-        android:layout_width="99dp"
-        android:layout_height="73dp"
-        android:layout_marginTop="504dp"
-        android:text="nextpage"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.486"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@id/bground2" />
-
     <TextView
-        android:id="@+id/questiontext"
-        android:layout_width="345dp"
-        android:layout_height="172dp"
+        android:id="@+id/left_no"
+        android:layout_width="123dp"
+        android:layout_height="164dp"
         android:fontFamily="@font/anton"
-        android:text="3+2  =  ?"
+        android:text="3"
         android:textColor="#FFEB3B"
         android:textSize="100sp"
         android:typeface="normal"
         app:layout_constraintBottom_toBottomOf="@id/answerboard"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.13"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.509" />
+
+    <TextView
+        android:id="@+id/operator"
+        android:layout_width="123dp"
+        android:layout_height="164dp"
+        android:fontFamily="@font/anton"
+        android:text="+"
+        android:textColor="#FFEB3B"
+        android:textSize="100sp"
+        android:typeface="normal"
+        app:layout_constraintBottom_toBottomOf="@id/answerboard"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.37"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.509" />
+
+    <TextView
+        android:id="@+id/right_no"
+        android:layout_width="123dp"
+        android:layout_height="164dp"
+        android:fontFamily="@font/anton"
+        android:text="2"
+        android:textColor="#FFEB3B"
+        android:textSize="100sp"
+        android:typeface="normal"
+        app:layout_constraintBottom_toBottomOf="@id/answerboard"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.55"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.509" />
+
+    <TextView
+        android:id="@+id/equalto"
+        android:layout_width="123dp"
+        android:layout_height="164dp"
+        android:fontFamily="@font/anton"
+        android:text="= ?"
+        android:textColor="#FFEB3B"
+        android:textSize="100sp"
+        android:typeface="normal"
+        app:layout_constraintBottom_toBottomOf="@id/answerboard"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.87"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.509" />
@@ -179,7 +217,7 @@
         app:layout_constraintStart_toStartOf="@id/platebg" />
 
     <ImageButton
-        android:id="@+id/No_0"
+        android:id="@+id/no_0"
         android:layout_width="65dp"
         android:layout_height="65dp"
         android:layout_marginStart="11dp"

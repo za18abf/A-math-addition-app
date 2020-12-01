@@ -7,7 +7,7 @@
     tools:context=".page3">
 
     <ImageView
-        android:id="@+id/imageView3"
+        android:id="@+id/bground3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@drawable/background"
@@ -19,41 +19,56 @@
         app:layout_constraintVertical_bias="1.0" />
 
     <ImageView
-        android:id="@+id/imageView4"
+        android:id="@+id/patrick"
         android:layout_width="179dp"
         android:layout_height="286dp"
-        android:layout_marginTop="336dp"
+        android:layout_marginTop="352dp"
         android:background="@drawable/cheers"
         android:rotation="-24"
-        app:layout_constraintEnd_toEndOf="@id/imageView3"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintEnd_toEndOf="@id/bground3"
+        app:layout_constraintHorizontal_bias="0.943"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@id/imageView3" />
+        app:layout_constraintTop_toTopOf="@id/bground3" />
 
     <ImageView
-        android:id="@+id/imageView5"
+        android:id="@+id/sponge"
         android:layout_width="201dp"
         android:layout_height="220dp"
         android:layout_marginTop="84dp"
         android:background="@drawable/spongebob"
         android:rotationY="194"
-        app:layout_constraintEnd_toEndOf="@id/imageView4"
+        app:layout_constraintEnd_toEndOf="@id/patrick"
         app:layout_constraintHorizontal_bias="0.087"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@id/imageView4" />
+        app:layout_constraintTop_toTopOf="@id/patrick" />
 
     <ImageButton
         android:id="@+id/replayButton"
         android:layout_width="184dp"
         android:layout_height="146dp"
         android:layout_marginStart="60dp"
-        android:layout_marginTop="112dp"
+        android:layout_marginTop="136dp"
         android:background="@null"
         android:scaleType="fitCenter"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.295"
+        app:layout_constraintHorizontal_bias="0.317"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/restart" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="146dp"
+        android:layout_height="102dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="4dp"
+        android:fontFamily="@font/bangers"
+        android:text="Yay!!!"
+        android:textColor="#F4DC09"
+        android:textSize="60sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.411"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
