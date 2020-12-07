@@ -22,11 +22,11 @@
         android:id="@+id/patrick"
         android:layout_width="179dp"
         android:layout_height="286dp"
-        android:layout_marginTop="352dp"
+        android:layout_marginTop="408dp"
         android:background="@drawable/cheers"
         android:rotation="-24"
         app:layout_constraintEnd_toEndOf="@id/bground3"
-        app:layout_constraintHorizontal_bias="0.943"
+        app:layout_constraintHorizontal_bias="0.939"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@id/bground3" />
 
@@ -47,7 +47,7 @@
         android:layout_width="184dp"
         android:layout_height="146dp"
         android:layout_marginStart="60dp"
-        android:layout_marginTop="136dp"
+        android:layout_marginTop="272dp"
         android:background="@null"
         android:scaleType="fitCenter"
         app:layout_constraintEnd_toEndOf="parent"
@@ -61,14 +61,89 @@
         android:layout_width="146dp"
         android:layout_height="102dp"
         android:layout_marginStart="44dp"
-        android:layout_marginTop="4dp"
+        android:layout_marginTop="12dp"
         android:fontFamily="@font/bangers"
         android:text="Yay!!!"
         android:textColor="#F4DC09"
         android:textSize="60sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.411"
+        app:layout_constraintHorizontal_bias="0.398"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/leftnumber"
+        android:layout_width="90dp"
+        android:layout_height="124dp"
+        android:layout_marginStart="70dp"
+        android:layout_marginTop="4dp"
+        android:fontFamily="@font/anton"
+        android:text="3"
+        android:textColor="#FFEB3B"
+        android:textSize="80sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.055"
+        app:layout_constraintStart_toStartOf="@id/bground3"
+        app:layout_constraintTop_toBottomOf="@id/textView" />
+
+    <TextView
+        android:id="@+id/operator1"
+        android:layout_width="90dp"
+        android:layout_height="124dp"
+        android:layout_marginStart="70dp"
+        android:layout_marginTop="4dp"
+        android:fontFamily="@font/anton"
+        android:text="+"
+        android:textColor="#FFEB3B"
+        android:textSize="80sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.29"
+        app:layout_constraintStart_toStartOf="@id/bground3"
+        app:layout_constraintTop_toBottomOf="@id/textView" />
+
+    <TextView
+        android:id="@+id/rightnumber"
+        android:layout_width="90dp"
+        android:layout_height="124dp"
+        android:layout_marginStart="70dp"
+        android:layout_marginTop="4dp"
+        android:fontFamily="@font/anton"
+        android:text="2"
+        android:textColor="#FFEB3B"
+        android:textSize="80sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.482"
+        app:layout_constraintStart_toStartOf="@id/bground3"
+        app:layout_constraintTop_toBottomOf="@id/textView" />
+
+    <TextView
+        android:id="@+id/operator2"
+        android:layout_width="90dp"
+        android:layout_height="124dp"
+        android:layout_marginStart="70dp"
+        android:layout_marginTop="4dp"
+        android:fontFamily="@font/anton"
+        android:text="= "
+        android:textColor="#FFEB3B"
+        android:textSize="80sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.717"
+        app:layout_constraintStart_toStartOf="@id/bground3"
+        app:layout_constraintTop_toBottomOf="@id/textView" />
+
+    <TextView
+        android:id="@+id/answer"
+        android:layout_width="90dp"
+        android:layout_height="124dp"
+        android:layout_marginStart="70dp"
+        android:layout_marginTop="4dp"
+        android:fontFamily="@font/anton"
+        android:text="5"
+        android:textColor="#FFEB3B"
+        android:textSize="80sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.904"
+        app:layout_constraintStart_toStartOf="@id/bground3"
+        app:layout_constraintTop_toBottomOf="@id/textView" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

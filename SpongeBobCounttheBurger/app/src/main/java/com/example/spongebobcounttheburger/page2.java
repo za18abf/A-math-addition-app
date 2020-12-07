@@ -2,27 +2,38 @@ package com.example.spongebobcounttheburger;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+
+import android.content.Context;
 import android.media.MediaPlayer;
+import android.os.Build;
 import android.os.Bundle;
+import android.os.VibrationEffect;
 import android.view.View;
 import android.view.animation.AlphaAnimation;
 import android.widget.Button;
 import android.content.Intent;
 import android.widget.ImageButton;
-import android.widget.ImageView; // for linking the ImageView object
-import android.view.MotionEvent; //for touch and drag event
+import android.widget.ImageView;
+import android.view.MotionEvent;
 import android.widget.TextView;
+import android.os.Vibrator;
+
+
 
 import java.util.Random;
+
+import javax.sql.StatementEvent;
 
 public class page2 extends AppCompatActivity {
 
 
     private ImageButton buttonno0, buttonno1, buttonno2, buttonno3, buttonno4, buttonno5, buttonno6, buttonno7, buttonno8, buttonno9;
     MediaPlayer mediaPlayer;
-    private TextView numberleft,numberright;
-    private AlphaAnimation clickbutton = new AlphaAnimation(1F, 0.5F);
-    private static int[] arrayno() {
+    private TextView numberleft,numberright,sumofresult;
+    private AlphaAnimation clickbutton = new AlphaAnimation(1F, 0.5F);      // this line calls the button animation
+
+
+    private static int[] arrayno() {        // this function produces random number to the question text
         Random r = new Random();
 
         int no1;
@@ -33,20 +44,25 @@ public class page2 extends AppCompatActivity {
             no2 = r.nextInt(10);
         }
 
-        while (no1 + no2 >= 10);
+        while (no1 + no2 >= 10);        // this line compares the sum of the two random numbers to check whether the sum is more than or equal to 10//
 
         return new int[] {no1, no2};
 
 
     }
 
-    public void wronganswer(){
+    public void wronganswer(){ // this function helps play a sound
 
         mediaPlayer = MediaPlayer.create(page2.this, R.raw.tryagain);
         mediaPlayer.start();
 
     }
+    public void vibration(){    // this function brings vibration property
+        Vibrator vibrator = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
+        vibrator.vibrate(500);
 
+
+    }
 
 
 
@@ -91,7 +107,6 @@ public class page2 extends AppCompatActivity {
         numberright = (TextView) findViewById(R.id.right_no);
         numberright.setText(number_r + "");
 
-
         buttonno0 = (ImageButton) findViewById(R.id.no_0);
         buttonno1 = (ImageButton) findViewById(R.id.no_1);
         buttonno2 = (ImageButton) findViewById(R.id.no_2);
@@ -109,9 +124,12 @@ public class page2 extends AppCompatActivity {
                 int noClick = 0;
                 v.startAnimation(clickbutton);
                 if (noClick == sum) {
-                    openpage3();
+                    openpage3(number_l,number_r,sum);
+
                 } else {
+                    vibration();
                     wronganswer();
+
 
                 }
             }
@@ -122,9 +140,10 @@ public class page2 extends AppCompatActivity {
                 int noClick = 1;
                 v.startAnimation(clickbutton);
                 if (noClick == sum) {
-                    openpage3();
+                    openpage3(number_l,number_r,sum);
 
                 } else {
+                    vibration();
                     wronganswer();
                 }
             }
@@ -135,9 +154,10 @@ public class page2 extends AppCompatActivity {
                 int noClick = 2;
                 v.startAnimation(clickbutton);
                 if (noClick == sum) {
-                    openpage3();
+                    openpage3(number_l,number_r,sum);
 
                 } else {
+                    vibration();
                     wronganswer();
 
                 }
@@ -149,9 +169,10 @@ public class page2 extends AppCompatActivity {
                 int noClick = 3;
                 v.startAnimation(clickbutton);
                 if (noClick == sum) {
-                    openpage3();
+                    openpage3(number_l,number_r,sum);
 
                 } else {
+                    vibration();
                     wronganswer();
 
                 }
@@ -163,9 +184,10 @@ public class page2 extends AppCompatActivity {
                 int noClick = 4;
                 v.startAnimation(clickbutton);
                 if (noClick == sum) {
-                    openpage3();
+                    openpage3(number_l,number_r,sum);
 
                 } else {
+                    vibration();
                     wronganswer();
 
                 }
@@ -177,9 +199,10 @@ public class page2 extends AppCompatActivity {
                 int noClick = 5;
                 v.startAnimation(clickbutton);
                 if (noClick == sum) {
-                    openpage3();
+                    openpage3(number_l,number_r,sum);
 
                 } else {
+                    vibration();
                     wronganswer();
 
                 }
@@ -191,9 +214,10 @@ public class page2 extends AppCompatActivity {
                 int noClick = 6;
                 v.startAnimation(clickbutton);
                 if (noClick == sum) {
-                    openpage3();
+                    openpage3(number_l,number_r,sum);
 
                 } else {
+                    vibration();
                     wronganswer();
 
                 }
@@ -205,9 +229,10 @@ public class page2 extends AppCompatActivity {
                 int noClick = 7;
                 v.startAnimation(clickbutton);
                 if (noClick == sum) {
-                    openpage3();
+                    openpage3(number_l,number_r,sum);
 
                 } else {
+                    vibration();
                     wronganswer();
 
                 }
@@ -219,9 +244,10 @@ public class page2 extends AppCompatActivity {
                 int noClick = 8;
                 v.startAnimation(clickbutton);
                 if (noClick == sum) {
-                    openpage3();
+                    openpage3(number_l,number_r,sum);
 
                 } else {
+                    vibration();
                     wronganswer();
 
                 }
@@ -233,9 +259,10 @@ public class page2 extends AppCompatActivity {
                 int noClick = 9;
                 v.startAnimation(clickbutton);
                 if (noClick == sum) {
-                    openpage3();
+                    openpage3(number_l,number_r,sum);
 
                 } else {
+                    vibration();
                     wronganswer();
 
                 }
@@ -247,7 +274,7 @@ public class page2 extends AppCompatActivity {
         mediaPlayer = MediaPlayer.create(page2.this, R.raw.applause);
 
 
-        ImageView burger = (ImageView) findViewById(R.id.burger1);
+        ImageView burger = (ImageView) findViewById(R.id.burger1);   // these lines of code makes the image view objects draggable
         burger.setOnTouchListener(handleTouch);
         ImageView burger1 = (ImageView) findViewById(R.id.burger2);
         burger1.setOnTouchListener(handleTouch);
@@ -273,10 +300,18 @@ public class page2 extends AppCompatActivity {
 
     }
 
-    public void openpage3 () {
+    public void openpage3 (int leftno,int rightno,int result ) { // this function initialise to move from page 2 to page 3
         Intent intent = new Intent(page2.this, page3.class);
+
+        Bundle bundle= new Bundle();
+        bundle.putInt("first_value",leftno);
+        bundle.putInt("second_value",rightno);
+        bundle.putInt("answer_value",result);
+
+        intent.putExtras(bundle);
         startActivity(intent);
         mediaPlayer = MediaPlayer.create(page2.this, R.raw.applause);
+
         mediaPlayer.start();
 
     }

@@ -32,7 +32,7 @@ public class page1 extends AppCompatActivity {
         mediaPlayer.setLooping(true);
         aSwitch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
-            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) { // this function initialise the switch to mute/unmute sound
                 if (isChecked == true) {
                     mediaPlayer.pause();
                     Toast.makeText(getBaseContext(), "mute", Toast.LENGTH_SHORT).show();
@@ -45,11 +45,9 @@ public class page1 extends AppCompatActivity {
         });
 
 
-
-
             button = (ImageButton) findViewById(R.id.playButton);
 
-            button.setOnClickListener(new View.OnClickListener() {
+            button.setOnClickListener(new View.OnClickListener() {   // this initialise the click property for the play button
                 @Override
                 public void onClick(View v) {
                     openpage2(v);
@@ -59,7 +57,7 @@ public class page1 extends AppCompatActivity {
 
         }
 
-        public void openpage2 (View v){
+        public void openpage2 (View v){ //this function initialise to move from page 1 to page 2
             Intent intent = new Intent(page1.this, page2.class);
             startActivity(intent);
             v.startAnimation(clickplay);

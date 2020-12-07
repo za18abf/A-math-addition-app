@@ -20,13 +20,14 @@
     <ImageView
         android:id="@+id/answerboard"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:scaleType="centerInside"
+        android:layout_height="627dp"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/clipboard" />
 
     <TextView
@@ -43,7 +44,7 @@
         app:layout_constraintHorizontal_bias="0.13"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.509" />
+        app:layout_constraintVertical_bias="0.45" />
 
     <TextView
         android:id="@+id/operator"
@@ -59,7 +60,7 @@
         app:layout_constraintHorizontal_bias="0.37"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.509" />
+        app:layout_constraintVertical_bias="0.45" />
 
     <TextView
         android:id="@+id/right_no"
@@ -75,7 +76,7 @@
         app:layout_constraintHorizontal_bias="0.55"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.509" />
+        app:layout_constraintVertical_bias="0.45" />
 
     <TextView
         android:id="@+id/equalto"
@@ -91,7 +92,7 @@
         app:layout_constraintHorizontal_bias="0.87"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.509" />
+        app:layout_constraintVertical_bias="0.45" />
 
     <ImageView
         android:id="@+id/platebg"
@@ -106,7 +107,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@id/bground2"
         app:layout_constraintTop_toTopOf="@id/bground2"
-        app:layout_constraintVertical_bias="0.758" />
+        app:layout_constraintVertical_bias="0.862" />
 
     <ImageView
         android:id="@+id/burger1"
